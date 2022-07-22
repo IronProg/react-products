@@ -1,0 +1,61 @@
+.card {
+  padding: 0px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 15px 0;
+}
+
+.product img {
+  background-color: white;
+  display: block;
+  width: 90%;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.text {
+  width: 80%;
+  height: 100%;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.text h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.text p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(77, 77, 77);
+}
+
+
+@media only screen and (max-width: 900px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 0;
+  }
+
+  .text h4 {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    grid-template-columns: 1fr;
+    padding: 25px 0;
+  }
+
+
+}
