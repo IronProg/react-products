@@ -6,12 +6,11 @@ const Select = (props) => {
   const selectHandler = () => {
     props.onChange(value.current.value)
   }
-
+  
   return (
     <select placeholder={props.placeholder} ref={value} className={props.className} onChange={selectHandler}>
-      <option value='' key={''}>All</option>
-      {props.options.map(item => (
-        <option key={item.id} value={item.id}>{item.name}</option>
+      {props.options.map((item, index) => (
+        <option key={index} value={item.name || ''}>{item.name || "All"}</option>
       ))}
     </select>
   )
